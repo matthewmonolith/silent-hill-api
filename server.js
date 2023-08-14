@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors') //cross origin, if you deploy the html to facebook, by default that wouldn't be able to access the api in the normal api, checks origin first and api origin, they're not the same, it doesn't match the origin, for security reasons it doesn't fetch it
+app.use(express.static('public'));
 const PORT = 8000
 
 app.use(cors())
